@@ -15,9 +15,15 @@ public:
 		++b;
 		return *this;
 	}
+	Test operator--()
+	{
+		--a;
+		--b;
+		return *this;
+	}
 	void Output()
 	{
-		std::cout << a << " " << b << std::endl;
+		std::cout <<"a: " << a << "\tb: " << b << std::endl;
 	}
 	~Test()
 	{
@@ -33,10 +39,21 @@ int main()
 {
 	Test obj(2,3);
 	obj.Output();
+
 	++obj;
 	obj.Output();
+
+	--obj;
+	obj.Output();
+
+	std::cout << std::endl;
+
 	Test obj1;
 	obj1.Output();
+
 	++obj1;
+	obj1.Output();
+
+	--obj1;
 	obj1.Output();
 }
